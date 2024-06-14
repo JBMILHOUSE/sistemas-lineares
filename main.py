@@ -1,4 +1,4 @@
-from src.problems import solve_problem_1, solve_problem_4, solve_problem_7
+from src.problems import solve_problem_1, solve_problem_2, solve_problem_4, solve_problem_7
 # from problems.problem_4 import solve_problem_4 
 # from problems.problem_7 import solve_problem_7
 from src.results.plot_results import plot_results
@@ -7,6 +7,7 @@ def main():
     # Mapeando números de problemas para as funções de solução correspondentes
     problems_map = {
         1: solve_problem_1,
+        2: solve_problem_2,
         4: solve_problem_4,
         7: solve_problem_7
     }
