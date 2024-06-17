@@ -13,7 +13,7 @@ def solve_problem_3():
     # Limites das variáveis (0 <= xj <= 1)
     x_bounds = [(0, 1), (0, 1), (0, 1)]
 
-    # Resolvendo o problema de programação linear
-    result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method='simplex')
+    # Resolvendo o problema de programação linear usando o método 'highs'
+    result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method='highs')
     
     return result
