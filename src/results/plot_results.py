@@ -10,4 +10,3 @@ def plot_results(results):
     plt.legend()
     plt.title('Resultados dos Problemas')
     plt.show()
-

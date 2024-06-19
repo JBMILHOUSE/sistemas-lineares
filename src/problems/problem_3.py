@@ -2,7 +2,7 @@ from scipy.optimize import linprog
 
 def solve_problem_3():
     # Coeficientes da função objetivo (convertendo maximização para minimização)
-    c = [-15, -30, -11]  # Multiplicamos por -1 porque linprog faz minimização
+    c = [-15, -41, 11]  # Multiplicamos por -1 porque linprog faz minimização
 
     # Coeficientes das restrições de desigualdade
     A = [[-2, 1, 1]]  # 2x1 - x2 - x3 >= 0

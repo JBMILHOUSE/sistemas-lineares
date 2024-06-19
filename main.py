@@ -31,7 +31,7 @@ def main():
             print(f'Problema {problem} - Status: {result.message}')
             if result.success:
                 print(f'Solução ótima: {result.x}')
-                print(f'Valor da função obketivo na solução ótima: {result.fun}')
+                print(f'Valor da função objetivo na solução ótima: {result.fun}')
             else:
                 print(f'Solução não encontrada')
         else:
