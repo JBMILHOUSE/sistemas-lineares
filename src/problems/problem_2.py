@@ -21,3 +21,12 @@ def solve_problem_2():
     result = linprog(c, A_ub=A, b_ub=b, bounds=[x0_bounds, x1_bounds], method='highs')
 
     return result
+
+def get_constraints_2():
+    A_ub = [
+        [1, 2],  # x1 + 2*x2 <= 6
+        [2, -1]  # 2*x1 - x2 <= 8
+    ]
+    b_ub = [6, 8]  # Termos constantes das restrições de desigualdade
+
+    return A_ub, b_ub, None, None

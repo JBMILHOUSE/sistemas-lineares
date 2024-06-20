@@ -22,3 +22,12 @@ def solve_problem_1():
     result = linprog(c, A_ub=A, b_ub=b, bounds=[x0_bounds, x1_bounds], method='highs')
 
     return result
+
+def get_constraints_1():
+    A_ub = [
+        [-2, -1],
+        [-1, -1],
+        [-1, -5]
+    ]
+    b_ub = [-6, -4, -10]
+    return A_ub, b_ub, None, None

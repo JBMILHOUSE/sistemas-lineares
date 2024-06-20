@@ -25,3 +25,17 @@ def solve_problem_5():
     result = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=x_bounds, method='highs')
     
     return result
+
+def get_constraints_5():
+    A_ub = [
+        [1, -1, 0],  # x1 - x2 <= -1
+        [0, 1, -1],  # x2 - x3 <= -1
+    ]
+    b_ub = [-1, -1] # Restrição de desigualdade
+
+    A_eq = [
+        [1, 1, 1]  # x1 + x2 + x3 = 12
+    ]
+    b_eq = [12] # Restrição de igualdade
+
+    return A_ub, b_ub, A_eq, b_eq

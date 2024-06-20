@@ -23,3 +23,11 @@ def solve_problem_7():
     result = linprog(c, A_ub=A, b_ub=b, bounds=bounds, method='highs')
 
     return result
+
+def get_constraints_7():
+    A_ub = []
+    b_ub = []
+    for k in range(1, 14):
+        A_ub.append([np.sin(k / 13.0), np.cos(k / 13.0)])
+        b_ub.append(7)
+    return A_ub, b_ub, None, None

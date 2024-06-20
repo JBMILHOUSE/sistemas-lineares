@@ -27,3 +27,12 @@ def solve_problem_4():
     result = linprog(c, A_ub=A, b_ub=b, A_eq=A_eq, b_eq=b_eq, bounds=x_bounds, method='highs')
 
     return result
+
+def get_constraints_4():
+    A_ub = [
+        [-1, 2, 0, 0],
+        [0, -1, 2, 0],
+        [0, 0, -1, 2]
+    ]
+    b_ub = [0, 0, 0]
+    return A_ub, b_ub, None, None

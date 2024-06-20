@@ -17,3 +17,8 @@ def solve_problem_3():
     result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method='highs')
     
     return result
+
+def get_constraints_3():
+    A_ub = [[-2, 1, 1]]  # 2x1 - x2 - x3 >= 0 (convertido para -2x1 + x2 + x3 <= 0)
+    b_ub = [0]  # Termo constante da restrição de desigualdade
+    return A_ub, b_ub, None, None
